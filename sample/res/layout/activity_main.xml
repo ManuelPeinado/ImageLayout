@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.manuelpeinado.imagelayout.ImageLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#aaa"
+    custom:fit="auto"
+    custom:image="@drawable/boroughs"
+    custom:imageHeight="1744"
+    custom:imageWidth="1150" >
+
+    <TextView
+        android:id="@+id/header"
+        style="@style/ImageText.Large"
+        custom:layout_centerX="318"
+        custom:layout_centerY="150"
+        custom:layout_maxWidth="440"
+        android:text="@string/choose_a_borough" />
+
+    <Button
+        android:id="@+id/manhattan"
+        style="@style/ImageText"
+        custom:layout_centerX="608"
+        custom:layout_centerY="595"
+        android:text="@string/manhattan" />
+
+    <Button
+        android:id="@+id/queens"
+        style="@style/ImageText"
+        custom:layout_centerX="906"
+        custom:layout_centerY="764"
+        android:text="@string/queens" />
+
+    <Button
+        android:id="@+id/bronx"
+        style="@style/ImageText"
+        custom:layout_centerX="923"
+        custom:layout_centerY="231"
+        android:text="@string/bronx" />
+
+    <Button
+        android:id="@+id/brooklyn"
+        style="@style/ImageText"
+        custom:layout_centerX="660"
+        custom:layout_centerY="1143"
+        android:text="@string/brooklyn" />
+
+    <Button
+        android:id="@+id/statenIsland"
+        style="@style/ImageText"
+        custom:layout_centerX="205"
+        custom:layout_centerY="1280"
+        android:text="@string/staten_island" />
+
+</com.manuelpeinado.imagelayout.ImageLayout>

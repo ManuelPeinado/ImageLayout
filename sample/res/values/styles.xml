@@ -1,0 +1,17 @@
+<resources>
+
+    <style name="ImageText">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/normal_text</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:shadowColor">#000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+    <style name="ImageText.Large">
+        <item name="android:textSize">@dimen/large_text</item>
+    </style>
+
+</resources>

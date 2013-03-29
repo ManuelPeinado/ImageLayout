@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ImageLayout Sample</string>
+    <string name="manhattan">Manhattan</string>
+    <string name="queens">Queens</string>
+    <string name="brooklyn">Brooklyn</string>
+    <string name="bronx">Bronx</string>
+    <string name="staten_island">Staten Island</string>
+    <string name="choose_a_borough">Choose a Borough</string>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ImageLayout">
+        <attr name="image" format="reference" />
+        <attr name="imageWidth" format="integer" />
+        <attr name="imageHeight" format="integer" />
+        <attr name="fit">
+            <flag name="auto" value="0" />
+            <flag name="vertical" value="1" />
+            <flag name="horizontal" value="2" />
+        </attr>
+        <attr name="android:gravity" />
+    </declare-styleable>
+    <declare-styleable name="ImageLayout_Layout">
+        <attr name="layout_width" format="integer" />
+        <attr name="layout_height" format="integer" />
+        <attr name="layout_maxWidth" format="integer" />
+        <attr name="layout_maxHeight" format="integer" />
+        <attr name="layout_centerX" format="integer" />
+        <attr name="layout_centerY" format="integer" />
+        <attr name="layout_left" format="integer" />
+        <attr name="layout_top" format="integer" />
+        <attr name="layout_right" format="integer" />
+        <attr name="layout_bottom" format="integer" />
+    </declare-styleable>
+
+</resources>

@@ -18,3 +18,11 @@ local.properties
 # Eclipse project files
 .classpath
 .project
+
+#Maven
+target
+release.properties
+pom.xml.*
+
+# Folder containing all the Google Play APKs
+apks
