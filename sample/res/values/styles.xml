@@ -13,5 +13,9 @@
     <style name="ImageText.Large">
         <item name="android:textSize">@dimen/large_text</item>
     </style>
-
+    
+    <style name="ImageText.Small">
+        <item name="android:textSize">@dimen/small_text</item>
+    </style>
+    
 </resources>

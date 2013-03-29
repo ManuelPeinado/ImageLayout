@@ -6,4 +6,8 @@
     <string name="bronx">Bronx</string>
     <string name="staten_island">Staten Island</string>
     <string name="choose_a_borough">Choose a Borough</string>
+    <string name="mastcam">MastCam</string>
+    <string name="you_have_selected">You have selected</string>
+    <string name="activity_title_basic_usage">New York City</string>
+	<string name="activity_title_add_children_programmatically">Curiosity Instruments</string>
 </resources>

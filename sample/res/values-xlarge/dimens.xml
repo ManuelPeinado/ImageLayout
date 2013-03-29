@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <dimen name="small_text">24dp</dimen>
     <dimen name="normal_text">32dp</dimen>
     <dimen name="large_text">48dp</dimen>
+
 </resources>

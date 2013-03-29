@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.manuelpeinado.imagelayout.ImageLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/imageLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#fff"
+    custom:fit="vertical"
+    custom:image="@drawable/curiosity"
+    custom:imageHeight="517"
+    custom:imageWidth="730" />
+
