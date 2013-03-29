@@ -11,7 +11,7 @@ For some applications this might be a useful replacement for the now deprecated 
 
 Try out the sample application:
 
-<a href="https://play.google.com/store/apps/details?id=com.manuelpeinado.multichoiceadapter.demo">
+<a href="https://play.google.com/store/apps/details?id=com.manuelpeinado.imagelayout.demo">
   <img alt="Android app on Google Play"
        src="https://developer.android.com/images/brand/en_app_rgb_wo_45.png" />
 </a>
