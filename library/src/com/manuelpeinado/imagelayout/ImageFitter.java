@@ -30,12 +30,14 @@ class ImageFitter {
 
     Rect fit(Bitmap bmp, int viewWidth, int viewHeight) {
         switch (fitMode) {
-        case ImageLayout.FIT_AUTO:
-            return fitSmart(bmp, viewWidth, viewHeight);
         case ImageLayout.FIT_VERTICAL:
             return fitVertical(bmp, viewWidth, viewHeight);
-        default:
+        case ImageLayout.FIT_HORIZONTAL:
             return fitHorizontal(bmp, viewWidth, viewHeight);
+        case ImageLayout.FIT_BOTH:
+            return fitBoth(bmp, viewWidth, viewHeight);
+        default:
+            return fitAuto(bmp, viewWidth, viewHeight);
         }
     }
 
@@ -49,10 +51,19 @@ class ImageFitter {
         return fitVertical(w, h, bitmapAspectRatio);
     }
 
-    private Rect fitSmart(Bitmap bmp, int w, int h) {
+    private Rect fitBoth(Bitmap bmp, int w, int h) {
         float bitmapAspectRatio = computeBitmapAspectRatio(bmp);
         float viewAspectRatio = w / (float) h;
         if (bitmapAspectRatio < viewAspectRatio) {
+            return fitHorizontal(w, h, bitmapAspectRatio);
+        }
+        return fitVertical(w, h, bitmapAspectRatio);
+    }
+    
+    private Rect fitAuto(Bitmap bmp, int w, int h) {
+        float bitmapAspectRatio = computeBitmapAspectRatio(bmp);
+        float viewAspectRatio = w / (float) h;
+        if (bitmapAspectRatio > viewAspectRatio) {
             return fitHorizontal(w, h, bitmapAspectRatio);
         }
         return fitVertical(w, h, bitmapAspectRatio);

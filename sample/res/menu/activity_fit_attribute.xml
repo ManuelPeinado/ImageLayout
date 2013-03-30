@@ -10,6 +10,10 @@
         android:showAsAction="never"
         android:title="@string/fit_horizontal"/>
     <item
+        android:id="@+id/fit_both"
+        android:showAsAction="never"
+        android:title="@string/fit_both"/>
+    <item
         android:id="@+id/fit_auto"
         android:showAsAction="never"
         android:title="@string/fit_auto"/>

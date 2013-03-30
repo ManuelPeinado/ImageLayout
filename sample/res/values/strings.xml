@@ -14,6 +14,7 @@
     <string name="activity_title_fit_attribute">Fit modes</string>
     <string name="fit_vertical">Fit vertical</string>
     <string name="fit_horizontal">Fit horizontal</string>
+    <string name="fit_both">Fit both</string>
     <string name="fit_auto">Fit auto</string>
 
 </resources>

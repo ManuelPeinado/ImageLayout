@@ -40,6 +40,20 @@ import android.view.ViewGroup;
 public class ImageLayout extends ViewGroup {
     
     /**
+     * The image is made to fill the available vertical space, and may be cropped 
+     * horizontally if there is not enough space. 
+     * <p>If there is too much horizontal space it is left blank. 
+     * <p>The vertical position of the image is controlled by the android:gravity attribute
+     */
+    public static final int FIT_VERTICAL = 0;
+    /**
+     * The image is made to fill the available horizontal space, and may be cropped 
+     * vertically if there is not enough space. 
+     * <p>If there is too much vertical space it is left blank. 
+     * <p>The vertical position of the image is controlled by the android:gravity attribute
+     */
+    public static final int FIT_HORIZONTAL = 1;
+    /**
      * The image is made to fill the available space vertically in portrait mode
      * and horizontally in landscape. 
      * <p>This is the default mode.
@@ -47,25 +61,13 @@ public class ImageLayout extends ViewGroup {
      * actual device orientation, but on the relative aspect ratios of the image
      * and the view.
      */
-    public static final int FIT_AUTO = 0;
-    /**
-     * The image is made to fill the available vertical space, and may be cropped 
-     * horizontally if there is not enough space. 
-     * <p>If there is too much horizontal space it is left blank. 
-     * <p>The vertical position of the image is controlled by the android:gravity attribute
-     */
-    public static final int FIT_VERTICAL = 1;
-    /**
-     * The image is made to fill the available horizontal space, and may be cropped 
-     * vertically if there is not enough space. 
-     * <p>If there is too much vertical space it is left blank. 
-     * <p>The vertical position of the image is controlled by the android:gravity attribute
-     */
-    public static final int FIT_HORIZONTAL = 2;
+    public static final int FIT_BOTH = 2;
+    // TODO write javadoc
+    public static final int FIT_AUTO = 3;
     /**
      * The fit mode that will be used in case the user does not specify one
      */
-    public static final int DEFAULT_FIT_MODE = FIT_AUTO;
+    public static final int DEFAULT_FIT_MODE = FIT_BOTH;
     
     private Bitmap bitmap;
     private Rect bitmapDestRect;
@@ -111,7 +113,7 @@ public class ImageLayout extends ViewGroup {
 
     /**
      * Determines how the background image is drawn
-     * @param fitMode Accepted values are {@link ImageLayout#FIT_AUTO},
+     * @param fitMode Accepted values are {@link ImageLayout#FIT_BOTH}, {@link ImageLayout#FIT_AUTO},
      *        {@link ImageLayout#FIT_VERTICAL} and {@link ImageLayout#FIT_HORIZONTAL} 
      */
     public void setFitMode(int newValue) {

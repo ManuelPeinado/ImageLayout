@@ -60,6 +60,9 @@ public class FitAttributeActivity extends Activity {
         case R.id.fit_auto:
             setFitMode(ImageLayout.FIT_AUTO);
             return true;
+        case R.id.fit_both:
+            setFitMode(ImageLayout.FIT_BOTH);
+            return true;
         }
         return false;
     }
@@ -71,14 +74,17 @@ public class FitAttributeActivity extends Activity {
 
     private void updateTitle() {
         switch (imageLayout.getFitMode()) {
-        case ImageLayout.FIT_AUTO:
-            setTitle(R.string.fit_auto);
-            return;
         case ImageLayout.FIT_VERTICAL:
             setTitle(R.string.fit_vertical);
             return;
         case ImageLayout.FIT_HORIZONTAL:
             setTitle(R.string.fit_horizontal);
+            return;
+        case ImageLayout.FIT_AUTO:
+            setTitle(R.string.fit_auto);
+            return;
+        case ImageLayout.FIT_BOTH:
+            setTitle(R.string.fit_both);
             return;
         }
     }
