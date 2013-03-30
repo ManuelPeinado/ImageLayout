@@ -18,8 +18,37 @@ Try out the sample application:
 
 Or browse the [source code of the sample application][2] for a complete example of use.
 
-[1]: https://raw.github.com/ManuelPeinado/ImageLayout/master/art/readme_pic.png
-[2]: https://github.com/ManuelPeinado/ImageLayout/tree/master/sample
+Usage
+-----
+
+Add an element named <code>com.manuelpeinado.imagelayout.ImageLayout</code> to  your XML layout. This element should have the following attributes:
+
+* <code>custom:image</code>. The drawable to be used as the background for the view.
+
+* <code>custom:imageWidth / imageHeight</code>. The dimensions of the image in which the layout coordinates of the children are expressed.
+
+In addition, you can use the following optional attributes:
+
+* <code>custom:fit</code>. Determines how the background image is drawn. Accepted values are:
+	*  <code>vertical</code>. The image is made to fill the available vertical space, and may be cropped horizontally if there is not enough space. If there is too much space it is left blank. The horizontal position of the image is controlled by the <code>android:gravity</code> attribute.
+	*  <code>horizontal</code>. The image is made to fill the available horizontal space, and may be cropped vertically if there is not enough space. If there is too much space it is left blank. The vertical position of the image is controlled by the <code>android:gravity</code> attribute.
+	*  <code>auto</code>. This is the default value. The image is made to fill the available space vertically in portrait mode and horizontally in landscape. Note that the library does not determine the orientation based on the actual device orientation, but on the relative aspect ratios of the image and the view.
+	
+The following image shows the result of applying these values in portrait orientation:
+
+![Fit portrait image][3]
+
+And in landscape:
+
+![Fit portrait image][4]
+
+Note that this is not a good candidate for the *auto* mode, as in both orientations significant image parts are cropped. See the "New York City" activity in the demo app for an example in which using this mode makes more sense.
+
+
+Coming soon
+-----------
+
+* An "adjustViewBounds" attribute similar to the one in <code>ImageView</code>.
 
 License
 -------
@@ -37,3 +66,8 @@ License
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
+    
+[1]: https://raw.github.com/ManuelPeinado/ImageLayout/master/art/readme_pic.png
+[2]: https://github.com/ManuelPeinado/ImageLayout/tree/master/sample
+[3]: https://raw.github.com/ManuelPeinado/ImageLayout/master/art/fit_portrait-small.png
+[4]: https://raw.github.com/ManuelPeinado/ImageLayout/master/art/fit_portrait-small.png

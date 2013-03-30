@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">ImageLayout Sample</string>
     <string name="manhattan">Manhattan</string>
     <string name="queens">Queens</string>
@@ -9,5 +10,7 @@
     <string name="mastcam">MastCam</string>
     <string name="you_have_selected">You have selected</string>
     <string name="activity_title_basic_usage">New York City</string>
-	<string name="activity_title_add_children_programmatically">Curiosity Instruments</string>
+    <string name="activity_title_add_children_programmatically">Curiosity Instruments</string>
+    <string name="activity_title_fit_attribute">custom:fit=\"auto\"</string>
+
 </resources>
