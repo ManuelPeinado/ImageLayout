@@ -70,4 +70,4 @@ License
 [1]: https://raw.github.com/ManuelPeinado/ImageLayout/master/art/readme_pic.png
 [2]: https://github.com/ManuelPeinado/ImageLayout/tree/master/sample
 [3]: https://raw.github.com/ManuelPeinado/ImageLayout/master/art/fit_portrait-small.png
-[4]: https://raw.github.com/ManuelPeinado/ImageLayout/master/art/fit_portrait-small.png
+[4]: https://raw.github.com/ManuelPeinado/ImageLayout/master/art/fit_landscape-small.png
