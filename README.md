@@ -30,8 +30,8 @@ Add an element named <code>com.manuelpeinado.imagelayout.ImageLayout</code> to  
 In addition, you can use the following optional attributes:
 
 * <code>custom:fit</code>. Determines how the background image is drawn. Accepted values are:
-	*  <code>vertical</code>. The image is made to fill the available vertical space, and may be cropped horizontally if there is not enough space. If there is too much space it is left blank. The horizontal position of the image is controlled by the <code>android:gravity</code> attribute.
-	*  <code>horizontal</code>. The image is made to fill the available horizontal space, and may be cropped vertically if there is not enough space. If there is too much space it is left blank. The vertical position of the image is controlled by the <code>android:gravity</code> attribute.
+	*  <code>vertical</code>. The image is made to fill the available vertical space, and may be cropped horizontally if there is not enough space. If there is too much horizontal space, it is left blank. The horizontal position of the image is controlled by the <code>android:gravity</code> attribute.
+	*  <code>horizontal</code>. The image is made to fill the available horizontal space, and may be cropped vertically if there is not enough space. If there is too much vertical space, it is left blank. The vertical position of the image is controlled by the <code>android:gravity</code> attribute.
 	*  <code>auto</code>. This is the default value. The image is made to fill the available space vertically in portrait mode and horizontally in landscape. Note that the library does not determine the orientation based on the actual device orientation, but on the relative aspect ratios of the image and the view.
 	
 The following image shows the result of applying these values in portrait orientation:

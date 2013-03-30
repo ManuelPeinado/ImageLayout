@@ -19,22 +19,20 @@ import android.graphics.Bitmap;
 import android.graphics.Rect;
 import android.view.Gravity;
 
-public class BitmapFitter {
-    public static final int MODE_FIT_AUTO = 0;
-    public static final int MODE_FIT_VERTICAL = 1;
-    public static final int MODE_FIT_HORIZONTAL = 2;
-    private int gravity = -1;
+class ImageFitter {
+    private int gravity;
     private int fitMode;
 
-    public BitmapFitter(int mode) {
+    ImageFitter(int mode, int gravity) {
         this.fitMode = mode;
+        this.gravity = gravity;
     }
 
-    public Rect fit(Bitmap bmp, int viewWidth, int viewHeight) {
+    Rect fit(Bitmap bmp, int viewWidth, int viewHeight) {
         switch (fitMode) {
-        case MODE_FIT_AUTO:
+        case ImageLayout.FIT_AUTO:
             return fitSmart(bmp, viewWidth, viewHeight);
-        case MODE_FIT_VERTICAL:
+        case ImageLayout.FIT_VERTICAL:
             return fitVertical(bmp, viewWidth, viewHeight);
         default:
             return fitHorizontal(bmp, viewWidth, viewHeight);
@@ -90,9 +88,5 @@ public class BitmapFitter {
     
     private static float computeBitmapAspectRatio(Bitmap bmp) {
         return bmp.getWidth() / (float) bmp.getHeight();
-    }
-
-    public void setGravity(int gravity) {
-        this.gravity = gravity;
     }
 }

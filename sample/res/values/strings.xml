@@ -11,6 +11,9 @@
     <string name="you_have_selected">You have selected</string>
     <string name="activity_title_basic_usage">New York City</string>
     <string name="activity_title_add_children_programmatically">Curiosity Instruments</string>
-    <string name="activity_title_fit_attribute">custom:fit=\"auto\"</string>
+    <string name="activity_title_fit_attribute">Fit modes</string>
+    <string name="fit_vertical">Fit vertical</string>
+    <string name="fit_horizontal">Fit horizontal</string>
+    <string name="fit_auto">Fit auto</string>
 
 </resources>

@@ -38,12 +38,43 @@ import android.view.ViewGroup;
  * deprecated AbsoluteLayout.
  */
 public class ImageLayout extends ViewGroup {
+    
+    /**
+     * The image is made to fill the available space vertically in portrait mode
+     * and horizontally in landscape. 
+     * <p>This is the default mode.
+     * <p>Note that the library does not determine the orientation based on the 
+     * actual device orientation, but on the relative aspect ratios of the image
+     * and the view.
+     */
+    public static final int FIT_AUTO = 0;
+    /**
+     * The image is made to fill the available vertical space, and may be cropped 
+     * horizontally if there is not enough space. 
+     * <p>If there is too much horizontal space it is left blank. 
+     * <p>The vertical position of the image is controlled by the android:gravity attribute
+     */
+    public static final int FIT_VERTICAL = 1;
+    /**
+     * The image is made to fill the available horizontal space, and may be cropped 
+     * vertically if there is not enough space. 
+     * <p>If there is too much vertical space it is left blank. 
+     * <p>The vertical position of the image is controlled by the android:gravity attribute
+     */
+    public static final int FIT_HORIZONTAL = 2;
+    /**
+     * The fit mode that will be used in case the user does not specify one
+     */
+    public static final int DEFAULT_FIT_MODE = FIT_AUTO;
+    
     private Bitmap bitmap;
     private Rect bitmapDestRect;
     private int imageWidth;
     private int imageHeight;
     private Rect bitmapSrcRect;
-    private BitmapFitter fitter;
+    private ImageFitter fitter;
+    private int fitMode = DEFAULT_FIT_MODE;
+    private int gravity = -1;
 
     public ImageLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -70,22 +101,49 @@ public class ImageLayout extends ViewGroup {
         imageWidth = a.getInteger(R.styleable.ImageLayout_imageWidth, -1);
         imageHeight = a.getInteger(R.styleable.ImageLayout_imageHeight, -1);
 
-        int fitMode = a.getInt(R.styleable.ImageLayout_fit, BitmapFitter.MODE_FIT_AUTO);
-        fitter = new BitmapFitter(fitMode);
+        int fitMode = a.getInt(R.styleable.ImageLayout_fit, this.fitMode);
+        setFitMode(fitMode);
 
-        int gravity = a.getInt(R.styleable.ImageLayout_android_gravity, -1);
+        int gravity = a.getInt(R.styleable.ImageLayout_android_gravity, this.gravity);
         setGravity(gravity);
         a.recycle();
     }
 
-    private void setGravity(int newValue) {
+    /**
+     * Determines how the background image is drawn
+     * @param fitMode Accepted values are {@link ImageLayout#FIT_AUTO},
+     *        {@link ImageLayout#FIT_VERTICAL} and {@link ImageLayout#FIT_HORIZONTAL} 
+     */
+    public void setFitMode(int newValue) {
+        if (fitter != null && fitMode == newValue) {
+            return;
+        }
+        fitMode = newValue;
+        rebuildFitter();
+    }
+    
+    public void setGravity(int newValue) {
+        if (fitter != null && gravity == newValue) {
+            return;
+        }
         if ((newValue & Gravity.HORIZONTAL_GRAVITY_MASK) == 0) {
             newValue |= Gravity.CENTER_HORIZONTAL;
         }
         if ((newValue & Gravity.VERTICAL_GRAVITY_MASK) == 0) {
             newValue |= Gravity.CENTER_VERTICAL;
         }
-        fitter.setGravity(newValue);
+        gravity = newValue;
+        rebuildFitter();
+    }
+    
+    public int getFitMode() {
+        return fitMode;
+    }
+    
+    private void rebuildFitter() {
+        fitter = new ImageFitter(fitMode, gravity);
+        requestLayout();
+        invalidate();
     }
 
     private int transformWidthFromBitmapToView(int w) {

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/fit_vertical"
+        android:showAsAction="never"
+        android:title="@string/fit_vertical"/>
+    <item
+        android:id="@+id/fit_horizontal"
+        android:showAsAction="never"
+        android:title="@string/fit_horizontal"/>
+    <item
+        android:id="@+id/fit_auto"
+        android:showAsAction="never"
+        android:title="@string/fit_auto"/>
+
+</menu>
