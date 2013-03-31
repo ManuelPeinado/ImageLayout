@@ -1,7 +1,7 @@
 Change Log
 ==========
 
-Version 1.0.1 *(2013-03-XX)*
+Version 1.0.1 *(2013-03-31)*
 ----------------------------
 * Enhanced "fit" attribute with new value "both"
 * Added sample that showcases the different values of the "fit" attribute
