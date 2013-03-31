@@ -54,8 +54,7 @@ Note that depending of your application you will use a different combination of 
 Also note that the size-related attributes such as `custom:layout_width` are not mandatory. If you don't specify any of them for a given dimension, the view is measured in the traditional "wrap content" fashion.
 
 
-View size adjustment
---------------------
+### View size adjustment
 
 You can have your ImageLayout fill its parent by specifying `match_parent` in both its `android:layout_width` and `android:layout_height` attributes. But, since the aspect ratio of the image will typically differ from the aspect of ratio of the parent view, this will result in a  waste of screen real state in the form of blank margins around the image.
 
