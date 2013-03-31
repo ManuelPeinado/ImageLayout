@@ -2,6 +2,7 @@
 <resources>
 
     <declare-styleable name="ImageLayout">
+
         <!-- The drawable to be used as the background for the view -->
         <attr name="image" format="reference" />
         <!-- The width of the image in which the layout coordinates of the children are expressed -->
@@ -10,22 +11,34 @@
         <attr name="imageHeight" format="integer" />
         <!-- Determines how the background image is drawn -->
         <attr name="fit">
-            <!-- The image is made to fill the available vertical space, and may be cropped 
+
+            <!--
+                 The image is made to fill the available vertical space, and may be cropped 
                  horizontal if there is not enough space. If there is too much horizontal space,
                  it is left blank. The horizontal position of the image is controlled by the 
-                 android:gravity attribute -->
+                 android:gravity attribute
+            -->
             <flag name="vertical" value="0" />
-            <!-- The image is made to fill the available horizontal space, and may be cropped 
+            <!--
+                 The image fills the available horizontal space, and may be cropped 
                  vertically if there is not enough space. If there is too much vertical space,
                  it is left blank. The vertical position of the image is controlled by the 
-                 android:gravity attribute -->
+                 android:gravity attribute
+            -->
             <flag name="horizontal" value="1" />
-            <!-- This is the default value. The image is made to fill the available space 
+            <!--
+                 The image fills the available space both vertically and horizontally. If the
+                 aspect ratio of the image does not match exactly the aspect ratio of the available
+                 space, the image is cropped either vertically or horizontally, depending of which
+                 provides the best fit
+            -->
+            <flag name="both" value="2" />
+            <!--
+                 This is the default value. The image fills the available space 
                  vertically in portrait mode and horizontally in landscape. Note that the
                  library does not determine the orientation based on the actual device 
-                 orientation, but on the relative aspect ratios of the image and the view -->
-            <flag name="both" value="2" />
-            <!-- TODO doc -->
+                 orientation, but on the relative aspect ratios of the image and the view
+            -->
             <flag name="auto" value="3" />
         </attr>
         <attr name="android:gravity" />

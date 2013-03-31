@@ -31,10 +31,10 @@ import android.view.ViewGroup;
  * A layout that arranges its children in relation to a background image. The
  * layout of each child is specified in image coordinates (pixels), and the
  * conversion to screen coordinates is performed automatically.
- * <p>
- * The background image is adjusted so that it fills the available space.
- * <p>
- * For some applications this might be a useful replacement for the now
+ * <p>The background image is adjusted so that it fills the available space. The exact
+ * details of this adjustment are controlled by the custom:fit and android:gravity 
+ * attributes
+ * <p>For some applications this might be a useful replacement for the now
  * deprecated AbsoluteLayout.
  */
 public class ImageLayout extends ViewGroup {
@@ -53,6 +53,15 @@ public class ImageLayout extends ViewGroup {
      * <p>The vertical position of the image is controlled by the android:gravity attribute
      */
     public static final int FIT_HORIZONTAL = 1;
+
+    /**
+     * The image fills the available space both vertically and horizontally. 
+     * <p>If the aspect ratio of the image does not match exactly the aspect ratio
+     * of the available space, the image is cropped the image is cropped either vertically 
+     * or horizontally, depending of which provides the best fit 
+     */
+    public static final int FIT_BOTH = 2;
+ 
     /**
      * The image is made to fill the available space vertically in portrait mode
      * and horizontally in landscape. 
@@ -61,13 +70,11 @@ public class ImageLayout extends ViewGroup {
      * actual device orientation, but on the relative aspect ratios of the image
      * and the view.
      */
-    public static final int FIT_BOTH = 2;
-    // TODO write javadoc
     public static final int FIT_AUTO = 3;
     /**
      * The fit mode that will be used in case the user does not specify one
      */
-    public static final int DEFAULT_FIT_MODE = FIT_BOTH;
+    public static final int DEFAULT_FIT_MODE = FIT_AUTO;
     
     private Bitmap bitmap;
     private Rect bitmapDestRect;

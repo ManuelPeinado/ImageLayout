@@ -22,6 +22,10 @@ import android.view.MenuItem;
 
 import com.manuelpeinado.imagelayout.ImageLayout;
 
+/**
+ * This activity illustrates the different values accepted by the 
+ * "custom:fit" attribute
+ */
 public class FitAttributeActivity extends Activity {
 
     private ImageLayout imageLayout;

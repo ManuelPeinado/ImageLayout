@@ -25,6 +25,10 @@ import android.widget.Toast;
 
 import com.manuelpeinado.imagelayout.ImageLayout;
 
+/**
+ * This activity demonstrates that it's also possible to add children to
+ * an ImageLayout from Java code
+ */
 public class AddChildrenProgrammaticallyActivity extends Activity implements OnClickListener {
 
     @Override

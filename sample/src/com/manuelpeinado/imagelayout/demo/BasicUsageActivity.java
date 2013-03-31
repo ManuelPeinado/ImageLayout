@@ -18,6 +18,10 @@ package com.manuelpeinado.imagelayout.demo;
 import android.app.Activity;
 import android.os.Bundle;
 
+/**
+ * This activity showcases the most common way to use the ImageLayout class,
+ * in which all the children are specified in XML
+ */
 public class BasicUsageActivity extends Activity {
 
     @Override

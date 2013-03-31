@@ -26,6 +26,9 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+/**
+ * This activity serves as the launcher for the different samples
+ */
 public class HomeActivity extends ListActivity {
     private List<ActivityInfo> activitiesInfo = Arrays.asList(
             new ActivityInfo(BasicUsageActivity.class, R.string.activity_title_basic_usage),
