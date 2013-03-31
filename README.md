@@ -21,6 +21,9 @@ Or browse the [source code of the sample application][2] for a complete example 
 Usage
 -----
 
+### Adding to your layout
+
+
 Add an element named <code>com.manuelpeinado.imagelayout.ImageLayout</code> to  your XML layout. This element should have the following attributes:
 
 ##### <code>custom:image</code>
@@ -36,16 +39,42 @@ In addition, you can use the following optional attributes:
 Determines how the background image is drawn. Accepted values are:
 
 *  <code>vertical</code>. The image is made to fill the available vertical space, and may be cropped horizontally if there is not enough space. If there is too much horizontal space, it is left blank. The horizontal position of the image is controlled by the <code>android:gravity</code> attribute.
+
 *  <code>horizontal</code>. The image is made to fill the available horizontal space, and may be cropped vertically if there is not enough space. If there is too much vertical space, it is left blank. The vertical position of the image is controlled by the <code>android:gravity</code> attribute.
-*  <code>both</code>. The image fills the available space both vertically and horizontally. If the aspect ratio of the image does not match exactly the aspect ratio of the available space, the image is cropped either vertically or horizontally, depending of which provides the best fit
+
+*  <code>both</code>. The image fills the available space both vertically and horizontally. If the aspect ratio of the image does not match exactly the aspect ratio of the available space, the image is cropped either vertically or horizontally, depending of which provides the best fit.
+
 *  <code>auto</code>. This is the default value. The image is made to fill the available space vertically in portrait mode and horizontally in landscape. Note that the library does not determine the orientation based on the actual device orientation, but on the relative aspect ratios of the image and the view.
 	
 Check the "Fit attribute" sample in the demo application to see these differente modes in action.
 
-Coming soon
------------
+### Adding children
 
-* An "adjustViewBounds" attribute similar to the one in <code>ImageView</code>.
+You can add child views inside your <ImageLayout> element just like you would to any other ViewGroup. But instead of using the android:layout_width and android:layout_height attributes to control how a child is positioned within ImageLayout, you should use the following:
+
+##### <code>custom:layout_width/height</code>
+
+Similar to android:layout_width/height, but expressed in image coordinates. 
+
+##### <code>custom:layout_maxWidth/maxHeight</code>
+
+Similar to android:layout_width/height, but expressed in image coordinates.
+
+##### <code>custom:layout_centerX/Y</code>
+
+Center of the child view, in image coordinates.
+
+##### <code>custom:layout_left/top/right/bottom</code>
+
+Bounds of the child view, in image coordinates.
+
+Note that depending of your application you will use a different combination of these attributes. For example might specify a value for custom:right in order to align the right side of your view with a given feature of the image, and custom:centerY to align the same view vertically with another feature.
+
+Also note that the size-related attributes such as custom:layout_width are not mandatory. If you don't specify any of them for a given dimension, the view is measured in the traditional "wrap content" fashion.
+
+
+View size adjustment
+--------------------
 
 
 Developed By
