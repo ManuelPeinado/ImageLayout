@@ -23,15 +23,15 @@ Usage
 
 Add an element named <code>com.manuelpeinado.imagelayout.ImageLayout</code> to  your XML layout. This element should have the following attributes:
 
-###### <code>custom:image</code>
+##### <code>custom:image</code>
 The drawable to be used as the background for the view.
 
-###### <code>custom:imageWidth/Height</code>
+##### <code>custom:imageWidth/Height</code>
 The dimensions of the image in which the layout coordinates of the children are expressed.
 
 In addition, you can use the following optional attributes:
 
-###### <code>custom:fit</code>
+##### <code>custom:fit</code>
 
 Determines how the background image is drawn. Accepted values are:
 
