@@ -35,7 +35,7 @@ In addition, you can use the following optional attributes:
 
 | Attribute              | Description                        |
 |------------------------|------------------------------------|
-| `custom:fit` | Determines how the background image is drawn. Accepted values are:<br><br>`vertical`. The image fills the available vertical space, and may be cropped horizontally if there is not enough room.<br><br>`horizontal`. The image fills the available horizontal space, and may be cropped vertically if there is not enough room.<br><br>`both`. The image fills the available space both vertically and horizontally.<br><br>`auto`. This is the default value. The image fills the available space vertically in portrait mode and horizontally in landscape.<br><br>Check the "Fit attribute" sample in the demo application to see these differente modes in action.|
+| `custom:fit` | Determines how the background image is drawn. Accepted values are:<br>- `vertical`. The image fills the available vertical space, and may be cropped horizontally if there is not enough room.<br>- `horizontal`. The image fills the available horizontal space.<br>- `both`. The image fills the available space both vertically and horizontally.<br>- `auto`. This is the default value. The image fills the available space vertically in portrait mode and horizontally in landscape.<br><br>Check the "Fit attribute" sample in the demo application to see these differente modes in action.|
 	
 
 ### Adding children
