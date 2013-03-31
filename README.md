@@ -47,6 +47,12 @@ Coming soon
 
 * An "adjustViewBounds" attribute similar to the one in <code>ImageView</code>.
 
+
+Developed By
+--------------------
+
+Manuel Peinado Gallego - <manuel.peinado@gmail.com>
+
 License
 -------
 
