@@ -193,11 +193,32 @@ public class ImageLayout extends ViewGroup {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        int parentWidth = MeasureSpec.getSize(widthMeasureSpec);
-        int parentHeight = MeasureSpec.getSize(heightMeasureSpec);
-        setMeasuredDimension(parentWidth, parentHeight);
-        int effectiveWidth = parentWidth - getPaddingLeft() - getPaddingRight();
-        int effectiveHeight = parentHeight - getPaddingTop() - getPaddingBottom();
+        int widthMode = MeasureSpec.getMode(widthMeasureSpec);
+        int heightMode = MeasureSpec.getMode(heightMeasureSpec);
+        int widthSpec = MeasureSpec.getSize(widthMeasureSpec);
+        int width = widthSpec;
+        int heightSpec = MeasureSpec.getSize(heightMeasureSpec);
+        int height = heightSpec;
+        boolean isExactWidth = widthMode == MeasureSpec.EXACTLY;
+        boolean isExactHeight = heightMode == MeasureSpec.EXACTLY;
+        float bitmapAspectRatio = (bitmap.getWidth() + getPaddingLeft() + getPaddingRight())
+                                    / ((float)bitmap.getHeight() + getPaddingTop() + getPaddingBottom());
+        if (isExactWidth && !isExactHeight) {
+            height = (int)(width / bitmapAspectRatio);
+            if (heightMode == MeasureSpec.AT_MOST && height > heightSpec) {
+                height = heightSpec;
+            }
+        }
+        else if (isExactHeight && !isExactWidth) {
+            width = (int)(height * bitmapAspectRatio);
+            if (widthMode == MeasureSpec.AT_MOST && width > widthSpec) {
+                width = widthSpec;
+            }
+        }
+        setMeasuredDimension(width, height);
+
+        int effectiveWidth = width - getPaddingLeft() - getPaddingRight();
+        int effectiveHeight = height - getPaddingTop() - getPaddingBottom();
         bitmapDestRect = fitter.fit(bitmap, effectiveWidth, effectiveHeight);
         adjustBitmapRectForPadding();
 
@@ -370,5 +391,4 @@ public class ImageLayout extends ViewGroup {
     protected ViewGroup.LayoutParams generateLayoutParams(ViewGroup.LayoutParams p) {
         return new LayoutParams(p);
     }
-
 }
