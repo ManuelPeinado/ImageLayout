@@ -35,7 +35,7 @@ In addition, you can use the following optional attributes:
 
 | Attribute              | Description                        |
 |------------------------|------------------------------------|
-| `custom:fit` | Determines how the background image is drawn. Accepted values are `vertical`, `horizontal`, `both` and `auto` (the default value). Check the "Fit attribute" sample in the demo application to see these differente modes in action.|
+| `custom:fit` | Determines how the background image is drawn. Accepted values are `vertical`, `horizontal`, `both` and `auto` (the default). Check the "Fit attribute" sample in the demo application to see these different modes in action.|
 	
 
 ### Adding children
