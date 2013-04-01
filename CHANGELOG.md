@@ -1,5 +1,13 @@
 Change Log
 ==========
+Version 1.0.4 *(2013-04-XX)*
+----------------------------
+
+Version 1.0.3 *(2013-04-01)*
+----------------------------
+* Fixed bug in "fit attribute" sample
+* Added to maven central
+* 
 Version 1.0.2 *(2013-03-31)*
 ----------------------------
 * Enhanced "fit" attribute with new value "both"
