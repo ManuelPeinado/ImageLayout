@@ -38,43 +38,43 @@ Usage
 ### Adding to your layout
 
 
-Add an element named `com.manuelpeinado.imagelayout.ImageLayout` to  your XML layout. This element should have the following attributes:
+Add an element named <tt>com.manuelpeinado.imagelayout.ImageLayout</tt> to  your XML layout. This element should have the following attributes:
 
 | Attribute              | Description                        |
 |------------------------|------------------------------------|
-| `custom:image` | The drawable to be used as the background for the view.|
-| `custom:imageWidth`<br>`custom:imageHeight` | The dimensions of the image in which the layout coordinates of the children are expressed. |
+| <tt>custom:image</tt> | The drawable to be used as the background for the view.|
+| <tt>custom:imageWidth</tt><br><tt>custom:imageHeight</tt> | The dimensions of the image in which the layout coordinates of the children are expressed. |
 
 In addition, you can use the following optional attributes:
 
 | Attribute              | Description                        |
 |------------------------|------------------------------------|
-| `custom:fit` | Determines how the background image is drawn. Accepted values are `vertical`, `horizontal`, `both` and `auto` (the default). Check the "Fit attribute" sample in the demo application to see these different modes in action.|
+| <tt>custom:fit</tt> | Determines how the background image is drawn. Accepted values are <tt>vertical</tt>, <tt>horizontal</tt>, <tt>both</tt> and <tt>auto</tt> (the default). Check the "Fit attribute" sample in the demo application to see these different modes in action.|
 	
 
 ### Adding children
 
-You can add child views to your ImageLayout just like you would to any other ViewGroup. But instead of using the `android:layout_width` and `android:layout_height` attributes to control the layout of children, you should use the following:
+You can add child views to your ImageLayout just like you would to any other ViewGroup. But instead of using the <tt>android:layout_width</tt> and <tt>android:layout_height</tt> attributes to control the layout of children, you should use the following:
 
 |Attribute                 |Description  |
 |--------------------------|-------------|
-| `custom:layout_width`<br>`custom:layout_height` | Similar to android:layout_width/height, but expressed in image coordinates |
-|`custom:layout_maxWidth`<br>`custom:layout_maxHeight`| Similar to android:layout_maxWidth/maxHeight, but expressed in image coordinates. |
-| `custom:layout_centerX`<br>`custom:layout_centerY`|Center of the child view, in image coordinates.|
-|`custom:layout_left`<br>`custom:layout_top`<br>`custom:layout_right`<br>`custom:layout_bottom`|Bounds of the child view, in image coordinates.|
+| <tt>custom:layout_width</tt><br><tt>custom:layout_height</tt> | Similar to android:layout_width/height, but expressed in image coordinates |
+|<tt>custom:layout_maxWidth</tt><br><tt>custom:layout_maxHeight</tt>| Similar to android:layout_maxWidth/maxHeight, but expressed in image coordinates. |
+| <tt>custom:layout_centerX</tt><br><tt>custom:layout_centerY</tt>|Center of the child view, in image coordinates.|
+|<tt>custom:layout_left</tt><br><tt>custom:layout_top</tt><br><tt>custom:layout_right</tt><br><tt>custom:layout_bottom</tt>|Bounds of the child view, in image coordinates.|
 
-Note that depending of your application you will use a different combination of these attributes. You might for example specify a value for `custom:right` in order to align the right side of your view with a given feature of the image, and `custom:centerY` to align the same view vertically with another feature.
+Note that depending of your application you will use a different combination of these attributes. You might for example specify a value for <tt>custom:right</tt> in order to align the right side of your view with a given feature of the image, and <tt>custom:centerY</tt> to align the same view vertically with another feature.
 
-Also note that the size-related attributes such as `custom:layout_width` are not mandatory. If you don't specify any of them for a given dimension, the view is measured in the traditional "wrap content" fashion.
+Also note that the size-related attributes such as <tt>custom:layout_width</tt> are not mandatory. If you don't specify any of them for a given dimension, the view is measured in the traditional "wrap content" fashion.
 
 
 ### View size adjustment
 
-You can have your ImageLayout fill its parent by specifying `match_parent` in both its `android:layout_width` and `android:layout_height` attributes. But, since the aspect ratio of the image will typically differ from the aspect of ratio of the parent view, this will result in a  waste of screen real state in the form of blank margins around the image.
+You can have your ImageLayout fill its parent by specifying <tt>match_parent</tt> in both its <tt>android:layout_width</tt> and <tt>android:layout_height</tt> attributes. But, since the aspect ratio of the image will typically differ from the aspect of ratio of the parent view, this will result in a  waste of screen real state in the form of blank margins around the image.
 
-To prevent this, simply use `wrap_content` in either `android:layout_width` or `android:layout_height`. This will cause the ImageLayout to adopt a size which matches the aspect ratio of its image.
+To prevent this, simply use <tt>wrap_content</tt> in either <tt>android:layout_width</tt> or <tt>android:layout_height</tt>. This will cause the ImageLayout to adopt a size which matches the aspect ratio of its image.
 
-Please note that the result of using `wrap_content` for *both* `android:layout_width` and `android:layout_height` is unspecified.
+Please note that the result of using <tt>wrap_content</tt> for *both* <tt>android:layout_width</tt> and <tt>android:layout_height</tt> is unspecified.
 
 Developed By
 --------------------
