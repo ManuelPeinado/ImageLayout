@@ -25,12 +25,14 @@ If you’re using Eclipse with the ADT plugin you can include ImageLayout as a l
 
 If you use maven to build your Android project you can simply add a dependency for this library.
 
-    <dependency>
-        <groupId>com.github.manuelpeinado.imagelayout</groupId>
-        <artifactId>library</artifactId>
-        <version>1.0.3</version>
-        <type>apklib</type>
-    </dependency>
+```xml
+<dependency>
+    <groupId>com.github.manuelpeinado.imagelayout</groupId>
+    <artifactId>library</artifactId>
+    <version>1.0.3</version>
+    <type>apklib</type>
+</dependency>
+```
 
 Usage
 -----
