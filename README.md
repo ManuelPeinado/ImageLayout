@@ -78,6 +78,11 @@ To prevent this, simply use <tt>wrap_content</tt> in either <tt>android:layout_w
 
 Please note that the result of using <tt>wrap_content</tt> for *both* <tt>android:layout_width</tt> and <tt>android:layout_height</tt> is unspecified.
 
+Who's using it
+--------------
+ 
+*Does your app use MultiChoiceAdapter? If you want to be featured on this list drop me a line.*
+
 Developed By
 --------------------
 
