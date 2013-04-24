@@ -81,7 +81,7 @@ Please note that the result of using <tt>wrap_content</tt> for *both* <tt>androi
 Who's using it
 --------------
  
-*Does your app use MultiChoiceAdapter? If you want to be featured on this list drop me a line.*
+*Does your app use ImageLayout? If you want to be featured on this list drop me a line.*
 
 Developed By
 --------------------
