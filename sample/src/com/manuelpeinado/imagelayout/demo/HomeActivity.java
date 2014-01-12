@@ -33,7 +33,8 @@ public class HomeActivity extends ListActivity {
     private List<ActivityInfo> activitiesInfo = Arrays.asList(
             new ActivityInfo(BasicUsageActivity.class, R.string.activity_title_basic_usage),
             new ActivityInfo(AddChildrenProgrammaticallyActivity.class, R.string.activity_title_add_children_programmatically),
-            new ActivityInfo(FitAttributeActivity.class, R.string.activity_title_fit_attribute));
+            new ActivityInfo(FitAttributeActivity.class, R.string.activity_title_fit_attribute),
+            new ActivityInfo(HorizontalScrollViewActivity.class, R.string.activity_title_horizontal_scroll_view));
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
