@@ -16,5 +16,6 @@
     <string name="fit_horizontal">Fit horizontal</string>
     <string name="fit_both">Fit both</string>
     <string name="fit_auto">Fit auto</string>
-
+    <string name="activity_title_horizontal_scroll_view">Horizontal scroll</string>
+    
 </resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <com.manuelpeinado.imagelayout.ImageLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        custom:fit="both"
+        custom:image="@drawable/curiosity"
+        custom:imageHeight="517"
+        custom:imageWidth="730">
+        <Button
+            custom:layout_right="110"
+            custom:layout_centerY="80"
+            android:text="@string/mastcam"
+            android:onClick="onButtonClick" />
+    </com.manuelpeinado.imagelayout.ImageLayout>>
+</HorizontalScrollView>
