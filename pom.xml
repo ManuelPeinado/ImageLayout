@@ -12,7 +12,7 @@
     <groupId>com.github.manuelpeinado.imagelayout</groupId>
     <artifactId>parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.4</version>
+    <version>1.0.4-SNAPSHOT</version>
 
     <name>Android-ImageLayout (Parent)</name>
     <description>Android library implementing a layout that arranges its children in relation to a background image</description>
