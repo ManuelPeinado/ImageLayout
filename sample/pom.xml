@@ -4,13 +4,14 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>sample</artifactId>
+  <version>1.0.4</version>
 	<name>ImageLayout Sample</name>
 	<packaging>apk</packaging>
 
 	<parent>
 		<groupId>com.github.manuelpeinado.imagelayout</groupId>
 		<artifactId>parent</artifactId>
-		<version>1.0.4</version>
+		<version>1.0.5-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
