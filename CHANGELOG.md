@@ -1,5 +1,9 @@
 Change Log
 ==========
+Version 1.0.5 *(2014-02-20)*
+----------------------------
+* Migrated from maven to gradle
+
 Version 1.0.4 *(2014-01-12)*
 ----------------------------
 * Added new "Horizontal ScrollView" sample

@@ -23,15 +23,15 @@ Including in your project
 
 If you’re using Eclipse with the ADT plugin you can include ImageLayout as a library project. Just create a new Android project in Eclipse using the library/ folder as the existing source, and add a reference to it to your application project.
 
-If you use maven to build your Android project you can simply add a dependency for this library.
+If you use gradle to build your Android project you can simply add a dependency for this library:
 
-```xml
-<dependency>
-    <groupId>com.github.manuelpeinado.imagelayout</groupId>
-    <artifactId>library</artifactId>
-    <version>1.0.4</version>
-    <type>apklib</type>
-</dependency>
+```
+
+dependencies {  
+    mavenCentral()
+    compile 'com.github.manuelpeinado.imagelayout:imagelayout:+'
+}
+
 ```
 
 Usage
