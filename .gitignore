@@ -34,3 +34,5 @@ apks
 # Gradle
 build
 .gradle
+sample/signing.properties
+
