@@ -36,7 +36,7 @@ public class AddChildrenProgrammaticallyActivity extends Activity implements OnC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_children_programmatically);
         
-        ImageLayout imageLayout = (ImageLayout) findViewById(R.id.imageLayout);
+        ImageLayout imageLayout = (ImageLayout) findViewById(R.id.image_layout);
         Button mastCamButton = new Button(this);
         ImageLayout.LayoutParams layoutParams = new ImageLayout.LayoutParams();
         layoutParams.right = 110;

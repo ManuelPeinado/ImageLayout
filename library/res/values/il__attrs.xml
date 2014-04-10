@@ -5,10 +5,13 @@
 
         <!-- The drawable to be used as the background for the view -->
         <attr name="image" format="reference" />
+
         <!-- The width of the image in which the layout coordinates of the children are expressed -->
         <attr name="imageWidth" format="integer" />
+
         <!-- The height of the image in which the layout coordinates of the children are expressed -->
         <attr name="imageHeight" format="integer" />
+
         <!-- Determines how the background image is drawn -->
         <attr name="fit">
 
@@ -43,6 +46,7 @@
         </attr>
         <attr name="android:gravity" />
     </declare-styleable>
+
     <declare-styleable name="ImageLayout_Layout">
         <attr name="layout_width" format="integer" />
         <attr name="layout_height" format="integer" />

@@ -57,8 +57,8 @@ public class ImageLayout extends ViewGroup {
     /**
      * The image fills the available space both vertically and horizontally. 
      * <p>If the aspect ratio of the image does not match exactly the aspect ratio
-     * of the available space, the image is cropped the image is cropped either vertically 
-     * or horizontally, depending of which provides the best fit 
+     * of the available space, the image is cropped either vertically or horizontally,
+     * depending on which provides the best fit
      */
     public static final int FIT_BOTH = 2;
  
@@ -71,6 +71,7 @@ public class ImageLayout extends ViewGroup {
      * and the view.
      */
     public static final int FIT_AUTO = 3;
+
     /**
      * The fit mode that will be used in case the user does not specify one
      */
@@ -104,8 +105,8 @@ public class ImageLayout extends ViewGroup {
             throw new RuntimeException("Drawable resource in layout description file must be of type \"BitmapDrawable\"");
         }
 
-        bitmap = ((BitmapDrawable) drawable).getBitmap();
-        bitmapSrcRect = new Rect(0, 0, bitmap.getWidth(), bitmap.getHeight());
+        bitmap = extractBitmapFromDrawable(drawable);
+        bitmapSrcRect = bitmapRect(bitmap);
 
         imageWidth = a.getInteger(R.styleable.ImageLayout_imageWidth, -1);
         imageHeight = a.getInteger(R.styleable.ImageLayout_imageHeight, -1);
@@ -120,7 +121,7 @@ public class ImageLayout extends ViewGroup {
 
     /**
      * Determines how the background image is drawn
-     * @param fitMode Accepted values are {@link ImageLayout#FIT_BOTH}, {@link ImageLayout#FIT_AUTO},
+     * @param newValue Accepted values are {@link ImageLayout#FIT_BOTH}, {@link ImageLayout#FIT_AUTO},
      *        {@link ImageLayout#FIT_VERTICAL} and {@link ImageLayout#FIT_HORIZONTAL} 
      */
     public void setFitMode(int newValue) {
@@ -148,7 +149,28 @@ public class ImageLayout extends ViewGroup {
     public int getFitMode() {
         return fitMode;
     }
-    
+
+    /**
+     * Changes the background image and its layout dimensions.
+     */
+    public void setImageResource(int imageResource, int imageWidth, int imageHeight) {
+        bitmap = extractBitmapFromDrawable(getResources().getDrawable(imageResource));
+        bitmapSrcRect = bitmapRect(bitmap);
+
+        this.imageWidth = imageWidth;
+        this.imageHeight = imageHeight;
+
+        rebuildFitter();
+    }
+
+    private static Bitmap extractBitmapFromDrawable(Drawable drawable) {
+        return ((BitmapDrawable) drawable).getBitmap();
+    }
+
+    private static Rect bitmapRect(Bitmap bitmap) {
+        return new Rect(0, 0, bitmap.getWidth(), bitmap.getHeight());
+    }
+
     private void rebuildFitter() {
         fitter = new ImageFitter(fitMode, gravity);
         requestLayout();
@@ -364,9 +386,6 @@ public class ImageLayout extends ViewGroup {
             a.recycle();
         }
 
-        /**
-         * {@inheritDoc}
-         */
         LayoutParams(ViewGroup.LayoutParams source) {
             super(source);
         }

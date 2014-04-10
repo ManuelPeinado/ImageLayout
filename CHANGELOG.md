@@ -1,9 +1,9 @@
 Change Log
 ==========
-Version 1.X.X *(2014-04-XX)*
+Version 1.1.0 *(2014-04-10)*
 ----------------------------
 * Improved support for Gradle/Android Studio
-* 
+* Allow changing image dynamically
 
 Version 1.0.5 *(2014-02-20)*
 ----------------------------

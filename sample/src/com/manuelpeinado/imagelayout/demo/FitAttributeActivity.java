@@ -34,7 +34,7 @@ public class FitAttributeActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fit_attribute);
-        imageLayout = (ImageLayout) findViewById(R.id.imageLayout);
+        imageLayout = (ImageLayout) findViewById(R.id.image_layout);
         initFitMode(savedInstanceState);
     }
 
