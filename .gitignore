@@ -21,6 +21,7 @@ local.properties
 
 # Android Studio
 *.iml
+.idea/
 
 #Maven
 target

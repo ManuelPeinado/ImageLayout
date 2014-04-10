@@ -54,17 +54,19 @@ public class FitAttributeActivity extends Activity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-        case R.id.fit_vertical:
+        if (item.getItemId() ==  R.id.fit_vertical) {
             setFitMode(ImageLayout.FIT_VERTICAL);
             return true;
-        case R.id.fit_horizontal:
+        }
+        if (item.getItemId() == R.id.fit_horizontal) {
             setFitMode(ImageLayout.FIT_HORIZONTAL);
             return true;
-        case R.id.fit_auto:
+        }
+        if (item.getItemId() == R.id.fit_auto) {
             setFitMode(ImageLayout.FIT_AUTO);
             return true;
-        case R.id.fit_both:
+        }
+        if (item.getItemId() == R.id.fit_both) {
             setFitMode(ImageLayout.FIT_BOTH);
             return true;
         }

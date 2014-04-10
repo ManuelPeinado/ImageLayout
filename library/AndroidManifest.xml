@@ -1,10 +1,4 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.manuelpeinado.imagelayout"
-    android:versionCode="105"
-    android:versionName="1.0.5" >
-
-    <uses-sdk
-        android:minSdkVersion="1"
-        android:targetSdkVersion="17" />
-
+    package="com.manuelpeinado.imagelayout">
+    <application />
 </manifest>

@@ -1,40 +1,38 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.manuelpeinado.imagelayout.demo"
-    android:versionCode="105"
-    android:versionName="1.0.5" >
-
-    <uses-sdk
-        android:minSdkVersion="3"
-        android:targetSdkVersion="17" />
+    package="com.manuelpeinado.imagelayout.demo">
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
         <activity
-            android:name=".HomeActivity"
-            android:label="@string/app_name" >
+            android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".BasicUsageActivity"
             android:label="@string/activity_title_basic_usage"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".AddChildrenProgrammaticallyActivity"
             android:label="@string/activity_title_add_children_programmatically"
             android:screenOrientation="landscape" />
+
         <activity
             android:name=".FitAttributeActivity"
             android:label="@string/activity_title_fit_attribute" />
+
         <activity
             android:name=".HorizontalScrollViewActivity"
             android:label="@string/activity_title_horizontal_scroll_view" />
+
     </application>
 
 </manifest>

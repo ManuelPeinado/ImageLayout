@@ -1,5 +1,10 @@
 Change Log
 ==========
+Version 1.X.X *(2014-04-XX)*
+----------------------------
+* Improved support for Gradle/Android Studio
+* 
+
 Version 1.0.5 *(2014-02-20)*
 ----------------------------
 * Migrated from maven to gradle
