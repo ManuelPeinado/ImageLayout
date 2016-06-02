@@ -29,7 +29,7 @@ If you use gradle to build your Android project you can simply add a dependency 
 
 dependencies {  
     mavenCentral()
-    compile 'com.github.manuelpeinado.imagelayout:imagelayout:+'
+    compile 'com.github.manuelpeinado.imagelayout:imagelayout:1.1.0'
 }
 
 ```
